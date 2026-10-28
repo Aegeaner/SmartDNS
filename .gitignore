@@ -1,0 +1,33 @@
+# Build output
+.gradle/
+build/
+.kotlin/
+out/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Per-machine SDK path, written by the Android tooling
+local.properties
+
+# Signing material, never committed
+keystore.properties
+keystore/
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test and analysis reports
+reports/
+*.hprof

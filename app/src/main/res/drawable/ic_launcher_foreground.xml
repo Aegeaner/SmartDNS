@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield, inside the 72dp adaptive-icon safe zone. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24 L80,34 V54 C80,70 70,81 54,85 C38,81 28,70 28,54 V34 Z" />
+    <path
+        android:fillColor="#1B1C4B"
+        android:pathData="M54,38 A11,11 0 1,0 54,60 A11,11 0 1,0 54,38 Z M54,45 A4,4 0 1,1 54,53 A4,4 0 1,1 54,45 Z" />
+    <path
+        android:fillColor="#1B1C4B"
+        android:pathData="M52,50 h4 v14 h-4 Z" />
+</vector>

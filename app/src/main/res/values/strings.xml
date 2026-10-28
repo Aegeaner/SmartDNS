@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartDNS</string>
+    <string name="tagline">离开目标热点走 DoT，回到热点恢复自动</string>
+
+    <string name="status_running">监控中</string>
+    <string name="status_enabled_not_running">已启用，服务未运行</string>
+    <string name="status_disabled">监控已关闭</string>
+    <string name="label_network">当前网络</string>
+    <string name="label_decision">判定</string>
+    <string name="label_system">系统 Private DNS</string>
+    <string name="label_last_check">最近复核</string>
+
+    <string name="network_offline">未连接</string>
+    <string name="network_wifi">Wi-Fi · %1$s</string>
+    <string name="network_wifi_unknown">Wi-Fi · SSID 不可读</string>
+    <string name="network_cellular">移动数据</string>
+    <string name="network_ethernet">以太网</string>
+    <string name="network_vpn">VPN</string>
+    <string name="network_other">其他网络</string>
+
+    <string name="decision_keep">不修改</string>
+    <string name="decision_automatic">自动（opportunistic）</string>
+    <string name="decision_host">DoT · %1$s</string>
+
+    <string name="system_not_set">未设置</string>
+    <string name="system_value">%1$s（%2$s）</string>
+    <string name="mode_off">关闭</string>
+    <string name="mode_opportunistic">自动</string>
+    <string name="mode_hostname">指定服务器</string>
+
+    <string name="last_none">尚未复核</string>
+    <string name="last_synced">%1$s · 已同步</string>
+    <string name="last_unchanged">%1$s · 无需变更</string>
+    <string name="last_denied">%1$s · 写入被拒绝</string>
+    <string name="last_not_applied">%1$s · 写入未生效</string>
+    <string name="last_kept">%1$s · 保持现状</string>
+
+    <string name="warn_no_write">未授予 WRITE_SECURE_SETTINGS，无法修改系统设置。执行下方 adb 命令后回到本页。</string>
+    <string name="warn_ssid_unreadable">读不到 SSID，已按“非目标网络”处理并启用 DoT。请授予定位权限、打开定位服务，并把位置权限设为“始终允许”。</string>
+    <string name="warn_background_location">位置权限只有“仅在使用中”：后台服务读不到 SSID，会一直按非目标网络写入 DoT。到应用设置把位置权限改为“始终允许”。</string>
+    <string name="warn_service_not_running">已启用监控但服务未运行。重新打开应用，或关掉再打开“后台监控”。</string>
+    <string name="warn_oem">部分定制系统会覆写 Private DNS。若设置被改回，请检查系统自带的 DNS 或加速功能。</string>
+
+    <string name="rule_title">规则</string>
+    <string name="ssid_label">目标热点 SSID</string>
+    <string name="ssid_hint">例如 MyPhone</string>
+    <string name="dot_label">DoT 服务器（域名）</string>
+    <string name="dot_hint">例如 dns.example.com</string>
+    <string name="save_rule">保存</string>
+    <string name="probe_dot">测试 853</string>
+    <string name="rule_empty_hint">保存完整规则后才能开启监控。</string>
+    <string name="rule_saved_hint">保存后会立即按当前网络复核一次。</string>
+
+    <string name="problem_ssid_empty">SSID 不能为空</string>
+    <string name="problem_ssid_long">SSID 最长 32 字节</string>
+    <string name="problem_host_empty">域名不能为空</string>
+    <string name="problem_host_ip">这里要填域名，不能是 IP 地址</string>
+    <string name="problem_host_long">域名总长度超过 253</string>
+    <string name="problem_host_label">域名格式不对</string>
+    <string name="problem_host_label_long">单段域名最长 63 字符</string>
+    <string name="problem_host_need_dot">至少需要两级域名，如 dns.example.com</string>
+
+    <string name="probe_idle">用 853 端口做一次 TLS 握手，确认证书与域名匹配。</string>
+    <string name="probe_invalid">先填一个合法的 DoT 域名。</string>
+    <string name="probe_running">正在连接 853…</string>
+    <string name="probe_ok">握手成功，用时 %1$d ms</string>
+    <string name="probe_failed">握手失败：%1$s</string>
+
+    <string name="perm_title">权限与后台</string>
+    <string name="perm_write_secure">WRITE_SECURE_SETTINGS</string>
+    <string name="perm_granted">已授予</string>
+    <string name="perm_missing">未授予</string>
+    <string name="perm_location">定位权限（读取 SSID）</string>
+    <string name="perm_background_location">后台定位（始终允许）</string>
+    <string name="perm_location_service">定位服务</string>
+    <string name="perm_enabled">已开启</string>
+    <string name="perm_disabled">未开启</string>
+    <string name="perm_notifications">通知</string>
+    <string name="perm_battery">电池优化</string>
+    <string name="perm_battery_exempt">不受限制</string>
+    <string name="perm_battery_optimized">受系统优化</string>
+    <string name="adb_hint">在电脑上执行一次（卸载前一直有效）：</string>
+    <string name="copy">复制</string>
+    <string name="copied">已复制</string>
+    <string name="request_runtime">授予运行时权限</string>
+    <string name="open_location_settings">打开定位设置</string>
+    <string name="open_app_settings">打开应用设置</string>
+    <string name="request_battery">打开电池优化列表</string>
+    <string name="battery_hint">Android / GrapheneOS：应用信息 → 电池 → 不受限制，并关闭“如果应用未使用则暂停应用活动”。这是前台服务的补充，不能替代它。“不受限制”只豁免 Doze 与 App Standby，系统仍会在后台几分钟后停止普通服务。</string>
+    <string name="notification_hint">前台服务必须有通知，系统不允许移除。Android 13+ 可直接划掉，服务继续运行；进程重启后通知会重新出现。</string>
+
+    <string name="action_title">控制</string>
+    <string name="monitor_switch">后台监控</string>
+    <string name="apply_now">立即应用</string>
+    <string name="restore_auto">写回自动</string>
+    <string name="restore_hint">“写回自动”是一次性操作；监控开启且不在目标热点时，下一次网络事件会重新写入 DoT。</string>
+    <string name="monitor_needs_rule">保存完整规则后才能开启监控。</string>
+
+    <string name="notif_channel">监控状态</string>
+    <string name="notif_channel_desc">Private DNS 同步状态</string>
+    <string name="notif_title">SmartDNS 监控中</string>
+    <string name="notif_auto">目标热点 · Private DNS 自动</string>
+    <string name="notif_dot">非目标网络 · DoT %1$s</string>
+    <string name="notif_idle">无网络 · 保持现状</string>
+    <string name="notif_no_rule">规则不完整</string>
+    <string name="notif_denied">写入被拒绝：缺少 WRITE_SECURE_SETTINGS</string>
+</resources>
